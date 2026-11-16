@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kablan Axel Malan — Cybersecurity Analyst</title>
+<meta name="description" content="Portfolio de Kablan Axel Malan, analyste cybersécurité junior — sécurité offensive & défensive, pentest, SOC.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23050a08'/%3E%3Ctext x='50' y='64' font-size='46' font-family='monospace' fill='%2339ffb0' text-anchor='middle'%3E%3E_%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="loader">
+  <div class="loader-inner">
+    <span class="loader-tag">&gt;_</span>
+    <span id="loader-pct">0%</span>
+  </div>
+</div>
+
+<div class="bg-fx" aria-hidden="true">
+  <div class="glow glow-a"></div>
+  <div class="glow glow-b"></div>
+  <div class="scanlines"></div>
+  <div class="grid-overlay"></div>
+</div>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="#top" class="logo">kablan<span class="accent">.</span>dev</a>
+
+    <nav class="main-nav" id="main-nav">
+      <ul>
+        <li><a href="#about" data-i18n="nav.about">À propos</a></li>
+        <li><a href="#experience" data-i18n="nav.experience">Expérience</a></li>
+        <li><a href="#work" data-i18n="nav.work">Projets</a></li>
+        <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <a class="header-email" href="mailto:axel.malan@epitech.eu">axel.malan@epitech.eu</a>
+      <button id="lang-toggle" class="lang-toggle" type="button" aria-label="Changer de langue">
+        <span class="lang-fr active">FR</span><span class="lang-sep">/</span><span class="lang-en">EN</span>
+      </button>
+      <button id="nav-burger" class="nav-burger" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-socials">
+      <a href="https://github.com/axelmalan23" target="_blank" rel="noopener" aria-label="GitHub">
+        <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M12 .5A11.5 11.5 0 0 0 .5 12c0 5.08 3.29 9.38 7.86 10.9.57.1.78-.25.78-.55v-2.1c-3.2.7-3.87-1.37-3.87-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.59.24 2.77.12 3.06.74.8 1.18 1.83 1.18 3.09 0 4.42-2.7 5.4-5.26 5.68.42.36.78 1.07.78 2.16v3.2c0 .3.21.66.79.55A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5Z"/></svg>
+      </a>
+      <a href="https://www.linkedin.com/in/axel-kablan-malan-ab7555302" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.03-1.85-3.03-1.86 0-2.14 1.45-2.14 2.94v5.66H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.8 0 0 .78 0 1.75v20.5C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.75V1.75C24 .78 23.2 0 22.22 0Z"/></svg>
+      </a>
+    </div>
+
+    <div class="hero-content">
+      <p class="hero-greeting" data-i18n="hero.greeting">Bonjour, je suis</p>
+      <h1 class="hero-name">KABLAN AXEL <span class="accent">MALAN</span></h1>
+      <div class="hero-role">
+        <span class="hero-role-static" data-i18n="hero.tagline">Spécialiste en</span>
+        <span class="hero-role-rotator">
+          <span class="rotator-word is-active">PENTEST</span>
+          <span class="rotator-word">SOC</span>
+        </span>
+        <span class="caret">|</span>
+      </div>
+      <p class="hero-subtitle" data-i18n="hero.subtitle">Sécurité offensive &amp; défensive — audits, pentest, SOC Wazuh/Fortigate.</p>
+      <div class="hero-cta">
+        <a href="#work" class="btn btn-primary" data-i18n="hero.cta">Voir mes projets</a>
+        <a href="#contact" class="btn btn-ghost" data-i18n="hero.cta2">Me contacter</a>
+      </div>
+    </div>
+
+    <a href="#about" class="scroll-cue" aria-label="Scroll">
+      <span data-i18n="hero.scroll">Scroll</span>
+      <span class="scroll-line"></span>
+    </a>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section about" id="about">
+    <div class="section-inner">
+      <span class="eyebrow">01 · <span data-i18n="about.eyebrow">À propos</span></span>
+      <h2 class="section-title" data-i18n="about.title">À propos de moi</h2>
+      <p class="about-text" data-i18n="about.text">
+        Passionné de cybersécurité, en formation à Epitech Bénin (promo 2028). Formé sur le terrain : audits de sécurité, pentest
+        et SOC Wazuh chez Euphorbia Group, SOC/Fortigate chez Talentys Cybersecurity. Solide culture réseaux et virtualisation
+        (Proxmox, VMware), rigueur forgée par une expérience militaire. Objectif : évoluer vers l'audit et l'ingénierie cybersécurité.
+      </p>
+
+      <div class="about-stats">
+        <div class="stat">
+          <span class="stat-number">3+</span>
+          <span class="stat-label" data-i18n="about.stat1">ans dans la cybersécurité</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">2</span>
+          <span class="stat-label" data-i18n="about.stat2">stages cybersécurité</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">5</span>
+          <span class="stat-label" data-i18n="about.stat3">ans d'expérience militaire</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">C1</span>
+          <span class="stat-label" data-i18n="about.stat4">niveau d'anglais</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT I DO -->
+  <section class="section whatido" id="whatido">
+    <div class="section-inner">
+      <span class="eyebrow">02 · <span data-i18n="whatido.eyebrow">Compétences</span></span>
+      <h2 class="section-title" data-i18n="whatido.title">CE QUE JE FAIS</h2>
+
+      <div class="do-grid">
+        <article class="do-card do-offensive">
+          <div class="do-head">
+            <span class="do-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="26" height="26"><path fill="currentColor" d="M12 2 2 7v6c0 5.1 3.6 9.6 10 11 6.4-1.4 10-5.9 10-11V7L12 2Zm-1 14.5-4-4 1.4-1.4L11 13.7l4.6-4.6L17 10.5l-6 6Z"/></svg>
+            </span>
+            <h3 data-i18n="whatido.off.title">SÉCURITÉ OFFENSIVE</h3>
+          </div>
+          <p data-i18n="whatido.off.desc">
+            Reconnaissance, énumération et tests d'intrusion : penser comme un attaquant pour trouver les failles avant qu'elles
+            ne soient exploitées — challenges boot2root, CTF et audits réels.
+          </p>
+          <ul class="tag-list">
+            <li data-i18n="tag.pentesting">Pentesting</li>
+            <li data-i18n="tag.recon">Reconnaissance &amp; énumération</li>
+            <li data-i18n="tag.ctf">CTF / Boot2root</li>
+            <li data-i18n="tag.stegano">Stéganographie</li>
+            <li data-i18n="tag.netsec">Sécurité réseau</li>
+          </ul>
+        </article>
+
+        <article class="do-card do-defensive">
+          <div class="do-head">
+            <span class="do-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="26" height="26"><path fill="currentColor" d="M12 2c-2.8 1.8-5.6 2.5-8.5 2.6C3 10 3 16 12 22c9-6 9-12 8.5-17.4-2.9-.1-5.7-.8-8.5-2.6Zm0 2.3c2.1 1.2 4.3 1.9 6.5 2.1.3 3.8-.2 8-6.5 12.3V4.3Z"/></svg>
+            </span>
+            <h3 data-i18n="whatido.def.title">SÉCURITÉ DÉFENSIVE</h3>
+          </div>
+          <p data-i18n="whatido.def.desc">
+            Surveillance, détection et réponse : supervision SOC avec Wazuh (SIEM), pare-feu Fortigate, analyse de logs,
+            infrastructure et annuaire sécurisés.
+          </p>
+          <ul class="tag-list">
+            <li data-i18n="tag.wazuh">Wazuh (SIEM)</li>
+            <li data-i18n="tag.fortigate">Fortigate</li>
+            <li data-i18n="tag.logs">Analyse de logs</li>
+            <li data-i18n="tag.ad">Active Directory</li>
+            <li data-i18n="tag.virtu">Proxmox / Ceph / Virtualisation</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAREER / EXPERIENCE -->
+  <section class="section career" id="experience">
+    <div class="section-inner">
+      <span class="eyebrow">03 · <span data-i18n="career.eyebrow">Parcours</span></span>
+      <h2 class="section-title" data-i18n="career.title">Mon parcours &amp; expériences</h2>
+
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-year">2026—2027</div>
+          <div class="timeline-body">
+            <h3 data-i18n="career.job1.role">Accompagnateur pédagogique</h3>
+            <span class="timeline-company">EPITECH · Abidjan, Côte d'Ivoire</span>
+            <p data-i18n="career.job1.desc">Accompagnement des étudiants dans leur cursus, amélioration de l'expérience campus et des relations parents-administration-étudiants.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-year">2026</div>
+          <div class="timeline-body">
+            <h3 data-i18n="career.job2.role">Stagiaire DSI — Système d'Information &amp; Sécurité</h3>
+            <span class="timeline-company">Euphorbia Group · Cotonou, Bénin</span>
+            <p data-i18n="career.job2.desc">Audits de sécurité externe/interne, SOC Wazuh sur Proxmox (agents, dashboard, tests d'attaque brute force/FIM), infrastructure hyperconvergée Proxmox + Ceph et synchronisation Active Directory.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-year" data-i18n="career.job3.year">Depuis 2023</div>
+          <div class="timeline-body">
+            <h3 data-i18n="career.job3.role">Chef de Projets</h3>
+            <span class="timeline-company">Epitech · Cotonou, Bénin</span>
+            <p data-i18n="career.job3.desc">Réalisation de challenges cybersécurité, jeux RPG &amp; Arcade, boot2root, stéganographie et CTF.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-year">2024</div>
+          <div class="timeline-body">
+            <h3 data-i18n="career.job4.role">Stagiaire SOC (Security Operation Center)</h3>
+            <span class="timeline-company">Talentys Cybersecurity · Grand-Bassam, Côte d'Ivoire</span>
+            <p data-i18n="career.job4.desc">Installation et configuration d'un pare-feu Fortigate, analyse de logs et détection d'anomalies réseau.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-year">2018—2023</div>
+          <div class="timeline-body">
+            <h3 data-i18n="career.job5.role">Marin Militaire</h3>
+            <span class="timeline-company">Défense Belge · Bruxelles, Belgique</span>
+            <p data-i18n="career.job5.desc">Stages maritimes et formation militaire — rigueur, discipline et gestion d'équipe sur le terrain.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <h3 class="education-title" data-i18n="career.education.title">Formation</h3>
+      <div class="education-list">
+        <div class="education-item">
+          <span class="edu-year">2023—2026</span>
+          <span data-i18n="career.edu1">Bachelor en Expertise Informatique — EPITECH Cotonou</span>
+        </div>
+        <div class="education-item">
+          <span class="edu-year">2018—2023</span>
+          <span data-i18n="career.edu2">Formation Militaire — École Royale Militaire (ERM), Bruxelles</span>
+        </div>
+        <div class="education-item">
+          <span class="edu-year">2018</span>
+          <span data-i18n="career.edu3">Baccalauréat Scientifique, Série C — EMPT Bingerville</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORK / PROJECTS -->
+  <section class="section work" id="work">
+    <div class="section-inner">
+      <span class="eyebrow">04 · <span data-i18n="work.eyebrow">Projets</span></span>
+      <h2 class="section-title" data-i18n="work.title">Mes Projets</h2>
+
+      <div class="work-grid">
+
+        <article class="work-card">
+          <span class="work-num">01</span>
+          <div class="work-icon"><svg viewBox="0 0 24 24" width="28" height="28"><path fill="currentColor" d="M4 4h16v12H4V4Zm0 14h16v2H4v-2ZM6 6v8h12V6H6Zm2 2h2v2H8V8Zm4 0h4v1h-4V8Zm-4 3h8v1H8v-1Z"/></svg></div>
+          <h3 data-i18n="work.p1.title">SOC Wazuh &amp; Simulation d'attaques</h3>
+          <span class="work-cat" data-i18n="work.p1.cat">Blue Team · SOC</span>
+          <p data-i18n="work.p1.desc">Déploiement d'agents Wazuh sur infrastructure Proxmox, mise en place du dashboard SIEM et tests d'attaque (brute force, FIM) pour valider la détection.</p>
+          <span class="work-tools">Wazuh · Proxmox · SIEM</span>
+        </article>
+
+        <article class="work-card">
+          <span class="work-num">02</span>
+          <div class="work-icon"><svg viewBox="0 0 24 24" width="28" height="28"><path fill="currentColor" d="M4 3h16v6H4V3Zm0 7h16v6H4v-6Zm0 7h16v4H4v-4ZM6 5v2h2V5H6Zm0 7v2h2v-2H6Zm0 7v1h2v-1H6Z"/></svg></div>
+          <h3 data-i18n="work.p2.title">Infrastructure hyperconvergée</h3>
+          <span class="work-cat" data-i18n="work.p2.cat">Infrastructure</span>
+          <p data-i18n="work.p2.desc">Mise en place d'une infrastructure Proxmox + Ceph et synchronisation Active Directory pour centraliser l'identité et le stockage.</p>
+          <span class="work-tools">Proxmox · Ceph · Active Directory</span>
+        </article>
+
+        <article class="work-card">
+          <span class="work-num">03</span>
+          <div class="work-icon"><svg viewBox="0 0 24 24" width="28" height="28"><path fill="currentColor" d="M12 2 3 6v6c0 5 3.8 9.3 9 10 5.2-.7 9-5 9-10V6l-9-4Zm0 2.2 7 3.1v4.3c0 3.9-2.9 7.3-7 8-4.1-.7-7-4.1-7-8V7.3l7-3.1Zm-1 5.3v6h2v-6h-2Zm0 7.5v1.5h2v-1.5h-2Z"/></svg></div>
+          <h3 data-i18n="work.p3.title">Déploiement pare-feu Fortigate</h3>
+          <span class="work-cat" data-i18n="work.p3.cat">Network Security</span>
+          <p data-i18n="work.p3.desc">Installation et configuration d'un pare-feu Fortigate, suivie d'une analyse continue des logs pour détecter les anomalies réseau.</p>
+          <span class="work-tools">Fortigate · Log Analysis</span>
+        </article>
+
+        <article class="work-card">
+          <span class="work-num">04</span>
+          <div class="work-icon"><svg viewBox="0 0 24 24" width="28" height="28"><path fill="currentColor" d="M11 2v3.1A7 7 0 0 0 5.1 11H2v2h3.1A7 7 0 0 0 11 18.9V22h2v-3.1A7 7 0 0 0 18.9 13H22v-2h-3.1A7 7 0 0 0 13 5.1V2h-2Zm1 5a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4Z"/></svg></div>
+          <h3 data-i18n="work.p4.title">Audits de sécurité internes/externes</h3>
+          <span class="work-cat" data-i18n="work.p4.cat">Pentest</span>
+          <p data-i18n="work.p4.desc">Identification de failles sur des périmètres internes et externes, avec propositions de remédiation priorisées.</p>
+          <span class="work-tools">Recon · Vulnerability Assessment</span>
+        </article>
+
+        <article class="work-card">
+          <span class="work-num">05</span>
+          <div class="work-icon"><svg viewBox="0 0 24 24" width="28" height="28"><path fill="currentColor" d="M9 2 7 7l-5 1 4 4-1 6 5-3 5 3-1-6 4-4-5-1-2-5Zm7 13v7l3-2 3 2v-7a6 6 0 0 1-6 0Z"/></svg></div>
+          <h3 data-i18n="work.p5.title">CTF, Boot2root &amp; Stéganographie</h3>
+          <span class="work-cat" data-i18n="work.p5.cat">Red Team · CTF</span>
+          <p data-i18n="work.p5.desc">Création et résolution de challenges CTF, machines boot2root et exercices de stéganographie, ainsi que de jeux RPG &amp; Arcade.</p>
+          <span class="work-tools">CTF · Boot2root · Steganography</span>
+        </article>
+
+      </div>
+      <p class="work-note" data-i18n="work.note">* Études de cas détaillées à venir.</p>
+    </div>
+  </section>
+
+  <!-- TECHSTACK -->
+  <section class="section techstack" id="techstack">
+    <div class="section-inner">
+      <span class="eyebrow">05 · <span data-i18n="tech.eyebrow">Stack</span></span>
+      <h2 class="section-title" data-i18n="tech.title">Ma Stack Technique</h2>
+
+      <div class="tech-groups">
+        <div class="tech-group">
+          <h3 data-i18n="tech.g1">Cybersécurité</h3>
+          <div class="tech-pills">
+            <span>Pentesting</span><span>SOC / SIEM</span><span>Wazuh</span><span data-i18n="tech.logs2">Analyse de logs</span><span data-i18n="tech.recon2">Reconnaissance &amp; énumération</span><span data-i18n="tech.netsec2">Sécurité réseau</span>
+          </div>
+        </div>
+        <div class="tech-group">
+          <h3 data-i18n="tech.g2">Programmation</h3>
+          <div class="tech-pills">
+            <span>C / C++</span><span>Python</span><span>Haskell</span><span>React</span><span>Django</span><span>HTML / CSS</span><span>Tailwind</span>
+          </div>
+        </div>
+        <div class="tech-group">
+          <h3 data-i18n="tech.g3">Réseau &amp; Infrastructure</h3>
+          <div class="tech-pills">
+            <span>Fortigate</span><span data-i18n="tech.netarch">Architecture réseau</span><span>Proxmox</span><span>VMware Workstation</span><span>Active Directory</span><span>Ceph</span><span data-i18n="tech.virtu2">Virtualisation</span>
+          </div>
+        </div>
+        <div class="tech-group">
+          <h3 data-i18n="tech.g4">Outils</h3>
+          <div class="tech-pills">
+            <span>GitHub</span><span>VS Code</span><span>VirtualBox</span><span>Microsoft Teams</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section contact" id="contact">
+    <div class="section-inner">
+      <span class="eyebrow">06 · <span data-i18n="contact.eyebrow">Contact</span></span>
+      <h2 class="section-title" data-i18n="contact.title">Discutons</h2>
+      <p class="contact-subtitle" data-i18n="contact.subtitle">Disponible pour des stages, missions pentest/SOC ou collaborations.</p>
+
+      <div class="contact-grid">
+        <div class="contact-item">
+          <span class="contact-label" data-i18n="contact.email.label">Email</span>
+          <a href="mailto:axel.malan@epitech.eu" class="contact-value">axel.malan@epitech.eu</a>
+        </div>
+        <div class="contact-item">
+          <span class="contact-label" data-i18n="contact.phone.label">Téléphone</span>
+          <a href="tel:+2250759479571" class="contact-value">+225 07 59 47 9571</a>
+        </div>
+        <div class="contact-item">
+          <span class="contact-label" data-i18n="contact.location.label">Localisation</span>
+          <span class="contact-value">Abidjan · Cotonou</span>
+        </div>
+        <div class="contact-item">
+          <span class="contact-label" data-i18n="contact.social.label">Réseaux</span>
+          <span class="contact-value contact-socials">
+            <a href="https://github.com/axelmalan23" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://www.linkedin.com/in/axel-kablan-malan-ab7555302" target="_blank" rel="noopener">LinkedIn</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <span data-i18n="footer.text">Conçu et développé par</span> Kablan Axel Malan · <span id="footer-year">2026</span>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
