@@ -175,9 +175,14 @@ main{ position:relative; z-index:1; }
   .hero-content{ margin-left: 56px; }
 }
 
-.hero-avatar{
+.avatar-tilt{
   position:relative; flex: 0 0 auto;
-  width: clamp(200px, 22vw, 300px); aspect-ratio: 320/400;
+  width: clamp(200px, 22vw, 300px);
+  transition: transform .25s ease-out;
+  will-change: transform;
+}
+.hero-avatar{
+  position:relative; width:100%; aspect-ratio: 320/400;
   animation: avatarFloat 6s ease-in-out infinite;
 }
 .avatar-glow{
@@ -190,6 +195,11 @@ main{ position:relative; z-index:1; }
 .avatar-reticle{ animation: avatarPulse 3s ease-in-out infinite; }
 .avatar-hood{ filter: drop-shadow(0 0 18px rgba(57,255,176,.25)); }
 .avatar-scan{ transform-box: fill-box; transform-origin: center; animation: avatarScan 3.2s ease-in-out infinite; filter: drop-shadow(0 0 6px rgba(77,232,255,.8)); }
+.avatar-pupil{
+  transform-box: fill-box; transform-origin: center;
+  transition: transform .2s ease-out;
+  filter: drop-shadow(0 0 5px rgba(77,232,255,.9));
+}
 
 @keyframes avatarFloat{ 0%,100%{ transform: translateY(0);} 50%{ transform: translateY(-14px);} }
 @keyframes avatarSpin{ to{ transform: rotate(360deg); } }
@@ -202,12 +212,23 @@ main{ position:relative; z-index:1; }
   100%{ transform: translateY(-78px); opacity:0; }
 }
 
+.avatar-caption{
+  margin-top:16px; display:flex; align-items:baseline; justify-content:center; gap:8px;
+  font-family: var(--font-mono); font-size:12px; color: var(--cyan-soft);
+  min-height:1.4em;
+}
+.avatar-caption-tag{ color: var(--green); opacity:.8; }
+.avatar-caption-cursor{
+  display:inline-block; width:6px; height:1em; background: var(--cyan);
+  animation: blink 1s steps(1) infinite; vertical-align:middle;
+}
+
 @media (max-width: 720px){
   .hero-main{ justify-content:center; text-align:center; }
   .hero-content{ margin-left:0; }
   .hero-role{ justify-content:center; }
   .hero-cta{ justify-content:center; }
-  .hero-avatar{ order:-1; width:160px; margin-bottom:8px; }
+  .avatar-tilt{ order:-1; width:160px; margin-bottom:8px; }
 }
 .hero-greeting{
   font-family: var(--font-mono); color: var(--green-soft); font-size:15px; letter-spacing:2px;

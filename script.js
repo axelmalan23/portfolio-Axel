@@ -11,6 +11,7 @@ const translations = {
     "hero.cta": "Voir mes projets",
     "hero.cta2": "Me contacter",
     "hero.scroll": "Scroll",
+    "avatar.caption": "Système initialisé. Prêt quand vous l'êtes.",
     "about.eyebrow": "À propos",
     "about.title": "À propos de moi",
     "about.text": "Passionné de cybersécurité, en formation à Epitech Bénin (promo 2028). Formé sur le terrain&nbsp;: audits de sécurité, pentest et SOC Wazuh chez Euphorbia Group, SOC/Fortigate chez Talentys Cybersecurity. Solide culture réseaux et virtualisation (Proxmox, VMware), rigueur forgée par une expérience militaire. Objectif&nbsp;: évoluer vers l'audit et l'ingénierie cybersécurité.",
@@ -100,6 +101,7 @@ const translations = {
     "hero.cta": "See my work",
     "hero.cta2": "Get in touch",
     "hero.scroll": "Scroll",
+    "avatar.caption": "System initialized. Ready when you are.",
     "about.eyebrow": "About",
     "about.title": "About Me",
     "about.text": "Cybersecurity enthusiast, currently studying at Epitech Benin (class of 2028). Trained in the field: security audits, pentesting and SOC Wazuh at Euphorbia Group, SOC/Fortigate at Talentys Cybersecurity. Strong background in networking and virtualization (Proxmox, VMware), with rigor forged by military experience. Goal: grow into security auditing and cybersecurity engineering.",
@@ -195,6 +197,20 @@ function applyLang(lang){
 
   document.querySelector('.lang-fr').classList.toggle('active', lang === 'fr');
   document.querySelector('.lang-en').classList.toggle('active', lang === 'en');
+
+  const captionEl = document.getElementById('avatarCaptionText');
+  if (captionEl) typeText(captionEl, translations[lang]['avatar.caption'], 30);
+}
+
+function typeText(el, text, speed = 32) {
+  if (el._typeTimer) clearInterval(el._typeTimer);
+  el.textContent = '';
+  let i = 0;
+  el._typeTimer = setInterval(() => {
+    i += 1;
+    el.textContent = text.slice(0, i);
+    if (i >= text.length) clearInterval(el._typeTimer);
+  }, speed);
 }
 
 document.getElementById('lang-toggle').addEventListener('click', () => {
@@ -249,6 +265,28 @@ nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
   burger.classList.remove('open');
   burger.setAttribute('aria-expanded', false);
 }));
+
+// ---------- Mouse-reactive avatar ----------
+const avatarTilt = document.getElementById('avatarTilt');
+const avatarPupil = document.querySelector('.avatar-pupil');
+if (avatarTilt && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+  window.addEventListener('mousemove', (e) => {
+    const rect = avatarTilt.getBoundingClientRect();
+    const cx = rect.left + rect.width / 2;
+    const cy = rect.top + rect.height / 2;
+    const dx = Math.max(-1, Math.min(1, (e.clientX - cx) / (window.innerWidth / 2)));
+    const dy = Math.max(-1, Math.min(1, (e.clientY - cy) / (window.innerHeight / 2)));
+
+    const maxShift = 10;
+    const maxTilt = 6;
+    avatarTilt.style.transform =
+      `perspective(700px) rotateX(${(-dy * maxTilt).toFixed(2)}deg) rotateY(${(dx * maxTilt).toFixed(2)}deg) translate(${(dx * maxShift).toFixed(1)}px, ${(dy * maxShift).toFixed(1)}px)`;
+
+    if (avatarPupil) {
+      avatarPupil.style.transform = `translate(${(dx * 10).toFixed(1)}px, ${(dy * 6).toFixed(1)}px)`;
+    }
+  });
+}
 
 // ---------- Hero word rotator ----------
 const rotatorWords = document.querySelectorAll('.rotator-word');

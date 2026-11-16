@@ -85,33 +85,41 @@
         </div>
       </div>
 
-      <div class="hero-avatar" aria-hidden="true">
-        <div class="avatar-glow"></div>
-        <svg class="avatar-svg" viewBox="0 0 320 400" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <linearGradient id="hoodGrad" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stop-color="#0e1b17"/>
-              <stop offset="100%" stop-color="#050a08"/>
-            </linearGradient>
-            <linearGradient id="rimGrad" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stop-color="#39ffb0"/>
-              <stop offset="100%" stop-color="#4de8ff"/>
-            </linearGradient>
-          </defs>
+      <div class="avatar-tilt" id="avatarTilt">
+        <div class="hero-avatar" aria-hidden="true">
+          <div class="avatar-glow"></div>
+          <svg class="avatar-svg" viewBox="0 0 320 400" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="hoodGrad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#0e1b17"/>
+                <stop offset="100%" stop-color="#050a08"/>
+              </linearGradient>
+              <linearGradient id="rimGrad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#39ffb0"/>
+                <stop offset="100%" stop-color="#4de8ff"/>
+              </linearGradient>
+            </defs>
 
-          <circle class="avatar-ring" cx="160" cy="210" r="145" fill="none" stroke="#39ffb0" stroke-opacity="0.3" stroke-width="1" stroke-dasharray="3 11"/>
+            <circle class="avatar-ring" cx="160" cy="210" r="145" fill="none" stroke="#39ffb0" stroke-opacity="0.3" stroke-width="1" stroke-dasharray="3 11"/>
 
-          <g class="avatar-reticle" stroke="url(#rimGrad)" stroke-width="2" fill="none" stroke-linecap="round">
-            <path d="M10,48 L10,10 L48,10"/>
-            <path d="M272,10 L310,10 L310,48"/>
-            <path d="M310,352 L310,390 L272,390"/>
-            <path d="M48,390 L10,390 L10,352"/>
-          </g>
+            <g class="avatar-reticle" stroke="url(#rimGrad)" stroke-width="2" fill="none" stroke-linecap="round">
+              <path d="M10,48 L10,10 L48,10"/>
+              <path d="M272,10 L310,10 L310,48"/>
+              <path d="M310,352 L310,390 L272,390"/>
+              <path d="M48,390 L10,390 L10,352"/>
+            </g>
 
-          <path class="avatar-hood" d="M160,42 C102,42 73,92 73,150 C73,218 44,258 44,358 L276,358 C276,258 247,218 247,150 C247,92 218,42 160,42 Z" fill="url(#hoodGrad)" stroke="url(#rimGrad)" stroke-width="1.5"/>
+            <path class="avatar-hood" d="M160,42 C102,42 73,92 73,150 C73,218 44,258 44,358 L276,358 C276,258 247,218 247,150 C247,92 218,42 160,42 Z" fill="url(#hoodGrad)" stroke="url(#rimGrad)" stroke-width="1.5"/>
 
-          <rect class="avatar-scan" x="88" y="172" width="144" height="5" rx="2.5" fill="url(#rimGrad)"/>
-        </svg>
+            <rect class="avatar-scan" x="88" y="172" width="144" height="5" rx="2.5" fill="url(#rimGrad)"/>
+
+            <circle class="avatar-pupil" cx="160" cy="174.5" r="4" fill="#4de8ff"/>
+          </svg>
+        </div>
+        <div class="avatar-caption">
+          <span class="avatar-caption-tag">&gt;_</span>
+          <span class="avatar-caption-text" id="avatarCaptionText"></span><span class="avatar-caption-cursor"></span>
+        </div>
       </div>
     </div>
 
