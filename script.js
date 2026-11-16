@@ -204,6 +204,17 @@ document.getElementById('lang-toggle').addEventListener('click', () => {
 applyLang(currentLang);
 
 // ---------- Loader ----------
+const loaderBars = document.getElementById('loader-bars');
+if (loaderBars) {
+  const barCount = 22;
+  for (let i = 0; i < barCount; i++) {
+    const bar = document.createElement('span');
+    bar.style.animationDelay = (i * 0.07) + 's';
+    bar.style.animationDuration = (0.9 + Math.random() * 0.6) + 's';
+    loaderBars.appendChild(bar);
+  }
+}
+
 window.addEventListener('load', () => {
   const loader = document.getElementById('loader');
   const pctEl = document.getElementById('loader-pct');
