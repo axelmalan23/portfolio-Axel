@@ -65,21 +65,52 @@
       </a>
     </div>
 
-    <div class="hero-content">
-      <p class="hero-greeting" data-i18n="hero.greeting">Bonjour, je suis</p>
-      <h1 class="hero-name">KABLAN AXEL <span class="accent">MALAN</span></h1>
-      <div class="hero-role">
-        <span class="hero-role-static" data-i18n="hero.tagline">Spécialiste en</span>
-        <span class="hero-role-rotator">
-          <span class="rotator-word is-active">PENTEST</span>
-          <span class="rotator-word">SOC</span>
-        </span>
-        <span class="caret">|</span>
+    <div class="hero-main">
+      <div class="hero-content">
+        <p class="hero-greeting" data-i18n="hero.greeting">Bonjour, je suis</p>
+        <h1 class="hero-name">KABLAN AXEL <span class="accent">MALAN</span></h1>
+        <div class="hero-role">
+          <span class="hero-role-static" data-i18n="hero.tagline">Spécialiste en</span>
+          <span class="hero-role-rotator">
+            <span class="rotator-word is-active">PENTEST</span>
+            <span class="rotator-word">SOC</span>
+          </span>
+          <span class="caret">|</span>
+        </div>
+        <p class="hero-subtitle" data-i18n="hero.subtitle">Sécurité offensive &amp; défensive — audits, pentest, SOC Wazuh/Fortigate.</p>
+        <div class="hero-cta">
+          <a href="#work" class="btn btn-primary" data-i18n="hero.cta">Voir mes projets</a>
+          <a href="#contact" class="btn btn-ghost" data-i18n="hero.cta2">Me contacter</a>
+        </div>
       </div>
-      <p class="hero-subtitle" data-i18n="hero.subtitle">Sécurité offensive &amp; défensive — audits, pentest, SOC Wazuh/Fortigate.</p>
-      <div class="hero-cta">
-        <a href="#work" class="btn btn-primary" data-i18n="hero.cta">Voir mes projets</a>
-        <a href="#contact" class="btn btn-ghost" data-i18n="hero.cta2">Me contacter</a>
+
+      <div class="hero-avatar" aria-hidden="true">
+        <div class="avatar-glow"></div>
+        <svg class="avatar-svg" viewBox="0 0 320 400" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="hoodGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#0e1b17"/>
+              <stop offset="100%" stop-color="#050a08"/>
+            </linearGradient>
+            <linearGradient id="rimGrad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#39ffb0"/>
+              <stop offset="100%" stop-color="#4de8ff"/>
+            </linearGradient>
+          </defs>
+
+          <circle class="avatar-ring" cx="160" cy="210" r="145" fill="none" stroke="#39ffb0" stroke-opacity="0.3" stroke-width="1" stroke-dasharray="3 11"/>
+
+          <g class="avatar-reticle" stroke="url(#rimGrad)" stroke-width="2" fill="none" stroke-linecap="round">
+            <path d="M10,48 L10,10 L48,10"/>
+            <path d="M272,10 L310,10 L310,48"/>
+            <path d="M310,352 L310,390 L272,390"/>
+            <path d="M48,390 L10,390 L10,352"/>
+          </g>
+
+          <path class="avatar-hood" d="M160,42 C102,42 73,92 73,150 C73,218 44,258 44,358 L276,358 C276,258 247,218 247,150 C247,92 218,42 160,42 Z" fill="url(#hoodGrad)" stroke="url(#rimGrad)" stroke-width="1.5"/>
+
+          <rect class="avatar-scan" x="88" y="172" width="144" height="5" rx="2.5" fill="url(#rimGrad)"/>
+        </svg>
       </div>
     </div>
 

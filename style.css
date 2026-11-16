@@ -148,9 +148,45 @@ main{ position:relative; z-index:1; }
 .hero-socials a{ color: var(--text-dim); transition: color .2s ease, transform .2s ease; }
 .hero-socials a:hover{ color: var(--green); transform: translateY(-2px); }
 
-.hero-content{ max-width: 760px; }
+.hero-main{ display:flex; align-items:center; justify-content:space-between; gap:40px; flex-wrap:wrap; }
+.hero-content{ max-width: 640px; }
 @media (min-width: 901px){
   .hero-content{ margin-left: 56px; }
+}
+
+.hero-avatar{
+  position:relative; flex: 0 0 auto;
+  width: clamp(200px, 22vw, 300px); aspect-ratio: 320/400;
+  animation: avatarFloat 6s ease-in-out infinite;
+}
+.avatar-glow{
+  position:absolute; inset:-20%; border-radius:50%;
+  background: radial-gradient(circle, rgba(57,255,176,.28), rgba(77,232,255,.12) 55%, transparent 72%);
+  filter: blur(30px);
+}
+.avatar-svg{ position:relative; width:100%; height:100%; display:block; }
+.avatar-ring{ transform-box: fill-box; transform-origin: center; animation: avatarSpin 22s linear infinite; }
+.avatar-reticle{ animation: avatarPulse 3s ease-in-out infinite; }
+.avatar-hood{ filter: drop-shadow(0 0 18px rgba(57,255,176,.25)); }
+.avatar-scan{ transform-box: fill-box; transform-origin: center; animation: avatarScan 3.2s ease-in-out infinite; filter: drop-shadow(0 0 6px rgba(77,232,255,.8)); }
+
+@keyframes avatarFloat{ 0%,100%{ transform: translateY(0);} 50%{ transform: translateY(-14px);} }
+@keyframes avatarSpin{ to{ transform: rotate(360deg); } }
+@keyframes avatarPulse{ 0%,100%{ opacity:.55;} 50%{ opacity:1;} }
+@keyframes avatarScan{
+  0%{ transform: translateY(-78px); opacity:0; }
+  12%{ opacity:1; }
+  50%{ transform: translateY(78px); opacity:1; }
+  88%{ opacity:1; }
+  100%{ transform: translateY(-78px); opacity:0; }
+}
+
+@media (max-width: 720px){
+  .hero-main{ justify-content:center; text-align:center; }
+  .hero-content{ margin-left:0; }
+  .hero-role{ justify-content:center; }
+  .hero-cta{ justify-content:center; }
+  .hero-avatar{ order:-1; width:160px; margin-bottom:8px; }
 }
 .hero-greeting{
   font-family: var(--font-mono); color: var(--green-soft); font-size:15px; letter-spacing:2px;
@@ -317,6 +353,7 @@ a.contact-value:hover{ color: var(--green); }
   .main-nav a{ font-size:16px; }
   .header-email{ display:none; }
   .nav-burger{ display:flex; }
+  .scroll-cue{ display:none; }
   .work-grid{ grid-template-columns: 1fr; }
   .about-stats{ grid-template-columns: 1fr 1fr; }
   .section{ padding:80px 20px; }
